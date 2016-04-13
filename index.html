@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <h2>Je laisse la place au SoundCloud</h2>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+  <h1>DA Player BITCH</h1>
+  <h2>Fais toi zizir gros</h2>
+  <form method="POST" class="formulaire" action="index.html" name="form" id="formsound">
+    <input type="text" placeholder="..." name="artiste">
+    <input id="getList" name="submit" type="submit">
+  </input>
 
-      <button id="getList">Recupérer la liste des sons
-      </button>
-      <ul></ul>
+</form> 
+</br>
+</br>
+<ul></ul>
 
-     
-  
-  </body>
+<aside id="lecteur">
+  <div id="avatar"></div>
+  <div id="auteur">Auteur:</div>
+  <div id="titre">titre :</div>
+  <div>
+    <button id="play">play</button>
+    <button id="pause">pause</button>
+  </div>
+  <input type="range" min="0" max="100" value="99" id="volume" name="vol">
+</aside>
 
-<script>
-  require("./js/app.js");
+
+
+</body>
+
+<script>  
+require("./js/app.js");
 </script>
 </html>

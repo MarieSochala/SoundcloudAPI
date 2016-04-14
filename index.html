@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <title>Hello World!</title>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
+
   <h1>DA Player BITCH</h1>
   <h2>Fais toi zizir gros</h2>
-  <form method="POST" class="formulaire" action="index.html" name="form" id="formsound">
-    <input type="text" placeholder="..." name="artiste">
-    <input id="getList" name="submit" type="submit">
-  </input>
 
-</form> 
+  <form method="POST" class="col s4 formulaire" action="index.html" name="form" id="formsound">
+    <div class="row">
+      <div class="input-field col s4">
+        <input type="text" placeholder="Artiste" name="artiste" id="artiste" class="validate">
+        <label for="artiste"></label>
+      </div>
+    </div>
+  </form> 
 </br>
 </br>
 <ul></ul>
@@ -33,10 +37,11 @@
 
 
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-<script type="text/javascript" src="js/materialize.min.js">></script>
+
+
 <script>  
 require("./js/app.js");
 </script>
+<script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 </html>

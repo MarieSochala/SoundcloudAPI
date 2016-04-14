@@ -1,17 +1,14 @@
 var $ = require('jquery');
 var SC = require('soundcloud');
+var cache = {};
 
 SC.initialize({
 	client_id: "7ef5e63f1d7b0de48f4abea27b6c6b70"
 });
 
-var cache = {};
-
-
-
 $("#formsound").submit(function(e) {
 	e.preventDefault();
-	var lui = $('artiste').val();
+	var lui = $('#artiste').val();
 	console.log("youhou");
 
 	SC.get("/users/" + lui + "/tracks").then(function(tracks) {

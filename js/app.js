@@ -11,9 +11,10 @@ var cache = {};
 
 $("#formsound").submit(function(e) {
 	e.preventDefault();
+	var lui = $('artiste').val();
 	console.log("youhou");
 
-	SC.get("/users/lordakat/tracks").then(function(tracks) {
+	SC.get("/users/" + lui + "/tracks").then(function(tracks) {
 		for (var i = 0; i < 6; i++) {
 			var track=tracks[i];
 			$("ul").append('<li> <button data-sc="'+track.id+'">Lire</button> Latest track: ' + tracks[i].title + '<li>');	

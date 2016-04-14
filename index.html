@@ -3,38 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
+  <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection"/>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
+<div class="container">
+  <h1>DA Player</h1>
 
-  <h1>DA Player BITCH</h1>
-  <h2>Fais toi zizir gros</h2>
-
-  <form method="POST" class="col s4 formulaire" action="index.html" name="form" id="formsound">
-    <div class="row">
-      <div class="input-field col s4">
-        <input type="text" placeholder="Artiste" name="artiste" id="artiste" class="validate">
-        <label for="artiste"></label>
+  <div class="row">
+    <form method="POST" class="col s6 offset-s5 formulaire" action="index.html" name="form" id="formsound">
+      <div class="row">
+        <div class="input-field col s4">
+          <input type="text" placeholder="Artiste" name="artiste" id="artiste" class="validate center-align">
+          <label for="artiste"></label>
+        </div>
       </div>
-    </div>
-  </form> 
+    </form> 
+  </div>
+
 </br>
 </br>
 <ul></ul>
 
 <aside id="lecteur">
   <div id="avatar"></div>
-  <div id="auteur">Auteur:</div>
-  <div id="titre">titre :</div>
+  <div id="auteur"></div>
+  <div id="titre"></div>
   <div>
-    <button id="play">play</button>
-    <button id="pause">pause</button>
+    <a id="play" class="waves-effect waves-light btn">play</a>
+    <a id="pause" class="waves-effect waves-light btn pink lighten-1">pause </a>
   </div>
-  <input type="range" min="0" max="100" value="99" id="volume" name="vol">
+  <div class="row">
+  <input type="range" min="0" max="100" value="99" id="volume" name="vol" class="col s4 offset-s4">
+</div>
 </aside>
-
-
+</div>
 
 </body>
 
@@ -43,5 +47,7 @@
 <script>  
 require("./js/app.js");
 </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
 </html>

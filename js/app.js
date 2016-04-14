@@ -2,6 +2,7 @@ var $ = require('jquery');
 var SC = require('soundcloud');
 var cache = {};
 
+
 SC.initialize({
 	client_id: "7ef5e63f1d7b0de48f4abea27b6c6b70"
 });
@@ -12,7 +13,7 @@ $("#formsound").submit(function(e) {
 	console.log("youhou");
 
 	SC.get("/users/" + lui + "/tracks").then(function(tracks) {
-		for (var i = 0; i < 6; i++) {
+		for (var i = 0; i < 20; i++) {
 			var track=tracks[i];
 			$("ul").append('<li> <button data-sc="'+track.id+'">Lire</button> Latest track: ' + tracks[i].title + '<li>');	
 			cache[track.id] = track;
@@ -71,6 +72,7 @@ $('#play').on('click', function(){
 $('#volume').on('change', function(){
 	pl.volume();	
 });
+
 
 
 

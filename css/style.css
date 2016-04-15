@@ -50,6 +50,17 @@ h1
 	to {transform:translate3D(0,5px,0);}
 }*/
 
+.recherche {
+  margin-top: 50%;
+}
+
+#lecteur {
+  margin-top: 50%;
+}
+
+.colonne_decalee {
+  padding: 20px;
+}
 
 $max: 100px;
 
@@ -167,4 +178,23 @@ $max: 100px;
 
 .non {
   display: none;
+}
+
+.row {
+  display: flex;
+}
+
+#biere {
+  background-image: url('../img/biere.jpg');
+  height: 100vh;
+}
+
+#rose {
+  background-image: url('../img/rose.jpg');
+  height: 100vh;
+}
+
+#mojito {
+  background-image: url('../img/mojito.jpeg');
+  height: 100vh;
 }

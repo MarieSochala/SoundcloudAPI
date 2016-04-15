@@ -15,7 +15,7 @@ $("#formsound").submit(function(e) {
 	SC.get("/users/" + lui + "/tracks").then(function(tracks) {
 		for (var i = 0; i < 20; i++) {
 			var track=tracks[i];
-			$("ul").append('<li> <a data-sc="'+track.id+'" class="btn-floating red"><i class="material-icons">play_arrow</i></a> Latest track: ' + tracks[i].title + '<li></br>');	
+			$("ul").append('<li> <a data-sc="'+track.id+'" class="btn-floating red" id="btnkitourn"><i class="material-icons">play_arrow</i></a> Latest track: ' + tracks[i].title + '<li></br>');	
 			cache[track.id] = track;
 			console.log(cache);
 		};
@@ -28,6 +28,7 @@ $('body').on('click', '[data-sc]', function(){
 
 	
 });
+
 
 var pl = { 
 	player: null,
@@ -44,6 +45,7 @@ var pl = {
 			pl.player = player;
 			pl.play();
 			pl.updateUI();
+			$('img').addClass("tourne");
 		});
 	},
 	updateUI: function (){
@@ -56,8 +58,11 @@ var pl = {
 	volume: function (){
 		var son = ($('#volume').val())/100;
 		this.player.setVolume(son);
-	}
+	},
 
+	afficheVolume: function (){
+		console.log(this.player.getVolume()*100);
+	}
 };
 
 $('#pause').on('click', function(){
@@ -71,9 +76,14 @@ $('#play').on('click', function(){
 	pl.play();
 });
 
+
 $('#volume').on('change', function(){
 	pl.volume();	
 });
+
+
+
+
 
 
 

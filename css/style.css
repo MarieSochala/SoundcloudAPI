@@ -7,6 +7,11 @@ li{
 	list-style-type: none;
 }
 
+#listing{
+	text-align: left;
+	padding-left: 35%;
+}
+
 h1
 {
   font-size: 48px;
@@ -23,3 +28,25 @@ h1
   line-height:150px;
   border-radius: 5px;
 }
+
+.avatar {
+	border-radius: 50%;
+}
+
+.tourne{
+	animation: infinite-spinning 4s ease infinite;
+	/*animation: bounce 1s infinite;*/
+}
+
+@keyframes infinite-spinning{
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/*@keyframes bounce{
+	from {transform:translate3D(0,0,0);}
+	50% {transform:translate3D(0,-10px,0);}
+	to {transform:translate3D(0,5px,0);}
+}*/

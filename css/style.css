@@ -9,7 +9,6 @@ li{
 
 #listing{
 	text-align: left;
-	padding-left: 35%;
 }
 
 h1
@@ -57,7 +56,6 @@ $max: 100px;
 .equilizer {
  height: $max;
  width: $max;
-transform: rotate(180deg);
 }
 
 .bar {
@@ -165,4 +163,8 @@ transform: rotate(180deg);
  100% {
    height: 80px;
  }
+}
+
+.non {
+  display: none;
 }

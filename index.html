@@ -8,51 +8,57 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-<div class="container">
-  <h1>DA Player</h1>
+  <div class="container">
+    <div class="row">  
+    <h1 class="col s6 offset-s3">DA Player</h1> 
+    </div>
 
-  <div class="row">
-    <form method="POST" class="col s6 offset-s5 formulaire" action="index.html" name="form" id="formsound">
-      <div class="row">
-        <div class="input-field col s4">
-          <input type="text" placeholder="Artiste" name="artiste" id="artiste" class="validate center-align">
-          <label for="artiste"></label>
+    <div class="row">
+      <form method="POST" class="col s6 offset-s5 formulaire" action="index.html" name="form" id="formsound">
+        <div class="row">
+          <div class="input-field col s4">
+            <input type="text" placeholder="Artiste" name="artiste" id="artiste" class="validate center-align">
+            <label for="artiste"></label>
+          </div>
         </div>
-      </div>
-    </form> 
-  </div>
+      </form> 
+    </div>
 
+  </br>
 </br>
-</br>
-<div id="listing">
-<ul></ul>
+<div class="row">
+  <div id="listing" class="col s8 offset-s4">
+    <ul></ul>
+  </div>
 </div>
 
 <aside id="lecteur">
-  <div id="avatar"></div>
-  <div id="auteur"></div>
-  <div id="titre"></div>
-  <div>
-    <a id="play" class="waves-effect waves-light btn">play</a>
-    <a id="pause" class="waves-effect waves-light btn pink lighten-1">pause </a>
-  </div>
   <div class="row">
+    <div id="avatar" class="col s3 offset-s4"></div>
+    <svg class="equilizer non col s3">
+     <g>
+       <title>Audio Equilizer</title>
+       <rect class="bar" transform="translate(100,0)" y="15"></rect>
+       <rect class="bar" transform="translate(75,0)" y="15"></rect>
+       <rect class="bar" transform="translate(50,0)" y="15"></rect>
+       <rect class="bar" transform="translate(25,0)" y="15"></rect>
+       <rect class="bar" transform="translate(0,0)" y="15"></rect>
+     </g>
+   </svg>
+ </div>
+ <div id="auteur"></div>
+ <div id="titre"></div>
+ <div>
+  <a id="play" class="waves-effect waves-light btn">play</a>
+  <a id="pause" class="waves-effect waves-light btn pink lighten-1">pause </a>
+</div>
+<div class="row">
   <input type="range" min="0" max="100" value="99" id="volume" name="vol" class="col s4 offset-s4">
   <div id="songros"></div>
 </div>
 </aside>
 </div>
 
-<svg class="equilizer">
- <g>
-   <title>Audio Equilizer</title>
-   <rect class="bar" transform="translate(100,0)" y="15"></rect>
-   <rect class="bar" transform="translate(75,0)" y="15"></rect>
-   <rect class="bar" transform="translate(50,0)" y="15"></rect>
-   <rect class="bar" transform="translate(25,0)" y="15"></rect>
-   <rect class="bar" transform="translate(0,0)" y="15"></rect>
- </g>
-</svg>
 
 </body>
 
@@ -64,3 +70,6 @@ require("./js/app.js");
 
 
 </html>
+
+
+

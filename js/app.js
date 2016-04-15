@@ -46,6 +46,7 @@ var pl = {
 			pl.play();
 			pl.updateUI();
 			$('img').addClass("tourne");
+			// $('svg').removeClass('non');
 		});
 	},
 	updateUI: function (){
@@ -66,12 +67,14 @@ var pl = {
 };
 
 $('#pause').on('click', function(){
+	// $('svg').addClass('non');
 	$('img').removeClass("tourne");
 	pl.pause();
 });
 
 
 $('#play').on('click', function(){
+	// $('svg').removeClass('non');
 	$('img').addClass("tourne");
 	pl.play();
 });
